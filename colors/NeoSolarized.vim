@@ -125,6 +125,7 @@ let g:neosolarized_termBoldAsBright = get(g:, "neosolarized_termBoldAsBright", 1
 let g:neosolarized_termtrans = get(g:, "neosolarized_termtrans", 0)
 let g:neosolarized_visibility = get(g:, "neosolarized_visibility", "normal")
 let g:neosolarized_vertSplitBgTrans = get(g:, "neosolarized_vertSplitBgTrans", 1)
+let g:neosolarized_patched = get(g:, "neosolarized_patched", 0)
 
 "}}}
 
@@ -142,6 +143,8 @@ let colors_name = "NeoSolarized"
 " ---------------------------------------------------------------------
 "
 " Set gui and terminal at the same time.
+
+if (g:neosolarized_patched == 0)
     let s:gui_mode       = "gui"
     let s:gui_base03      = "#002b36"
     let s:gui_base02      = "#073642"
@@ -160,6 +163,25 @@ let colors_name = "NeoSolarized"
     let s:gui_cyan        = "#2aa198"
     let s:gui_green       = "#719e07" "experimental
     "let s:green       = "#859900" "original
+else
+    let s:gui_mode       = "gui"
+    let s:gui_base03      = "#001e26"
+    let s:gui_base02      = "#002731"
+    let s:gui_base01      = "#465a61"
+    let s:gui_base00      = "#52676f"
+    let s:gui_base0       = "#708183"
+    let s:gui_base1       = "#81908f"
+    let s:gui_base2       = "#e9e2cb"
+    let s:gui_base3       = "#fcf4dc"
+    let s:gui_yellow      = "#a57705"
+    let s:gui_orange      = "#bd3612"
+    let s:gui_red         = "#d01b24"
+    let s:gui_magenta     = "#c61b6e"
+    let s:gui_violet      = "#5856b9"
+    let s:gui_blue        = "#2075c7"
+    let s:gui_cyan        = "#259185"
+    let s:gui_green       = "#728905"
+endif
 
     let s:term_mode       = "cterm"
     let s:term_base03      = "8"
